@@ -9,18 +9,11 @@ logging.info('Start of program')
 logging.info('The logging module is working.')
 # create the ig.json file template as dictoinary
 
-
-'''
-ig_template = open(dir +'ig-template.json')  #ig-template  lack spreadsheet and valueset information
-igjson = ig_template.read() # convert to strings
-igpy =json.loads(igjson)  # convert to py dict format
-'''
-
 logging.info('create the ig.json file template as dictionary')
 
 # globals
 
-dir='/Users/ehaas/Documents/FHIR/IG-Template/'  # change to the local path name
+dir='/Users/ehaas/Documents/FHIR/obs-media-profile/'  # change to the local path name
 
 ''' this is the definitions file skeleton you need to modify as needed see ig publisher documenentation at  f http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation or more information. Note it includes the US-Core as a dependencyList'''
 
@@ -34,7 +27,7 @@ igxml ='''<?xml version="1.0" encoding="UTF-8"?><!--Hidden IG for de facto IG pu
 
 # extension in spreadsheet - these need to be manually listed here needs to be named same as SD files
 
-extensions = ['template-blah','template-complex','template-view','template-type','template-subtype','template-height','template-width', 'template-frames','template-duration']
+extensions = ['template-view','template-type','template-subtype','template-height','template-width', 'template-frames','template-duration']
 
 # operation in spreadsheet - these need to be manually listed here
 

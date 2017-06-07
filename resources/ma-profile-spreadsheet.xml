@@ -17,7 +17,7 @@
   <WindowWidth>19260</WindowWidth>
   <WindowTopX>150</WindowTopX>
   <WindowTopY>5160</WindowTopY>
-  <ActiveSheet>7</ActiveSheet>
+  <ActiveSheet>4</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -4414,7 +4414,7 @@
    <Column ss:StyleID="s115" ss:AutoFitWidth="0" ss:Width="60"/>
    <Column ss:StyleID="s115" ss:AutoFitWidth="0" ss:Width="81"/>
    <Column ss:StyleID="s115" ss:AutoFitWidth="0" ss:Width="36.75"/>
-   <Column ss:StyleID="s115" ss:AutoFitWidth="0" ss:Width="120.75"/>
+   <Column ss:StyleID="s115" ss:AutoFitWidth="0" ss:Width="252.75"/>
    <Column ss:StyleID="s115" ss:AutoFitWidth="0" ss:Width="161.25"/>
    <Column ss:StyleID="s115" ss:AutoFitWidth="0" ss:Width="114"/>
    <Column ss:StyleID="s115" ss:AutoFitWidth="0" ss:Width="135"/>
@@ -4572,7 +4572,7 @@
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s102"><Data ss:Type="String">photo | video | audio</Data><NamedCell
+    <Cell ss:StyleID="s126"><Data ss:Type="String">Type</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s127"><Data ss:Type="String">Whether the media is a photo (still image), an audio recording, or a video recording.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -4606,7 +4606,7 @@
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s102"><Data ss:Type="String">The type of acquisition equipment/process</Data><NamedCell
+    <Cell ss:StyleID="s126"><Data ss:Type="String">Subtype</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s103"><Data ss:Type="String">Details of the type of the media - usually, how it was acquired (what type of device). If images sourced from a DICOM system, are wrapped in a Media resource, then this is the modality</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -4639,7 +4639,7 @@
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s127"><Data ss:Type="String">Height of the image in pixels (photo/video)</Data><NamedCell
+    <Cell ss:StyleID="s126"><Data ss:Type="String">Height</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s127"><Data ss:Type="String">Height of the image in pixels (photo/video).</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -4672,7 +4672,7 @@
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s127"><Data ss:Type="String">Width of the image in pixels (photo/video)</Data><NamedCell
+    <Cell ss:StyleID="s126"><Data ss:Type="String">Width</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s127"><Data ss:Type="String">Width of the image in pixels (photo/video).</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -4705,7 +4705,7 @@
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s127"><Data ss:Type="String">Number of frames if &gt; 1 (photo)</Data><NamedCell
+    <Cell ss:StyleID="s126"><Data ss:Type="String">Frames</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s127"><Data ss:Type="String">The number of frames in a photo. This is used with a multi-page fax, or an imaging acquisition context that takes multiple slices in a single image, or an animated gif. If there is more than one frame, this SHALL have a value in order to alert interface software that a multi-frame capable rendering widget is required.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -4738,7 +4738,7 @@
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s127"><Data ss:Type="String">Length in seconds (audio / video)</Data><NamedCell
+    <Cell ss:StyleID="s126"><Data ss:Type="String">Duration</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s127"><Data ss:Type="String">The duration of the recording in seconds - for audio and video.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -4772,7 +4772,7 @@
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s102"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s127"><Data ss:Type="String">Imaging view, e.g. Lateral or Antero-posterior</Data><NamedCell
+    <Cell ss:StyleID="s102"><Data ss:Type="String">View</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s127"><Data ss:Type="String">The name of the imaging view e.g. Lateral or Antero-posterior (AP).</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -5549,12 +5549,13 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
    <TopRowBottomPane>1</TopRowBottomPane>
    <SplitVertical>1</SplitVertical>
-   <LeftColumnRightPane>1</LeftColumnRightPane>
+   <LeftColumnRightPane>8</LeftColumnRightPane>
    <ActivePane>0</ActivePane>
    <Panes>
     <Pane>
@@ -5562,15 +5563,16 @@
     </Pane>
     <Pane>
      <Number>1</Number>
+     <ActiveCol>1</ActiveCol>
     </Pane>
     <Pane>
      <Number>2</Number>
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>8</ActiveRow>
+     <ActiveRow>22</ActiveRow>
      <ActiveCol>0</ActiveCol>
-     <RangeSelection>R9</RangeSelection>
+     <RangeSelection>R22C1:R23C1</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -7022,7 +7024,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
